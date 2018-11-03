@@ -21,15 +21,12 @@ list_hash["IPMI2 RAKP HMAC-SHA1"] = '^[a-f0-9]{130}(:[a-f0-9]{40})?$'
 def find_hash(string):    
     for hash_name, regex in list_hash.items():
             if re.compile(regex, re.IGNORECASE).match(string) is not None:
-                    return "Hash found : " + hash_name
+                    return hash_name
 
 
 parser = argparse.ArgumentParser(description='Find hash')
 parser.add_argument('hash', metavar='INPUT', type=str, help='The Hash to find')
 
 args = parser.parse_args()
-
-print(args.hash)
-
 print(find_hash(args.hash))
 
