@@ -1,10 +1,16 @@
 # hashid
 
+installation:
+- pip install wikipedia
+
 run : 
 - py hashid.py 'your_hash'
 
 exemple cmd : 
 - py hashid.py `'68b329da9893e34099c7d8ad5cb9c940'`
+- py .\hashid.py --h `'$2a$12$GhvMmNVjRW29ulnudl.LbuAnUtN/LRfe1JsBm1Xu6LE3059z5Tr8m'`
+- py hashid.py --list `'26dea9e65b4701c84168d390bfa7c8ab68cd907186a32dfc2e74e875'`
+- py hashid.py -- wikipedia `'b7c2d6f13a43dce2e44ad120a9cd8a13d0ca23f0414275c0bbe1070d2d1299b1c04da0f1a0f1e4e2537300263a2200000000000000000000140768617368636174:472bdabe2d5d4bffd6add7b3ba79a291d104a9ef'`
 
 list of hash and a example : 
 - md5 : `68b329da9893e34099c7d8ad5cb9c940`
@@ -19,3 +25,8 @@ list of hash and a example :
 - PostgreSQL : `md54e9c5b51bd070727b0ed21956cb68de7`
 - Microsoft Office 2013 : `$office$*2013*100000*256*16*7dd611d7eb4c899f74816d1dec817b3b*948dc0b2c2c6c32f14b5995a543ad037*0b7ee0e48e935f937192a59de48a7d561ef2691d5c8a3ba87ec2d04402a94895`
 - IPMI2 RAKP HMAC-SHA1 : `b7c2d6f13a43dce2e44ad120a9cd8a13d0ca23f0414275c0bbe1070d2d1299b1c04da0f1a0f1e4e2537300263a2200000000000000000000140768617368636174:472bdabe2d5d4bffd6add7b3ba79a291d104a9ef`
+
+option available : 
+- --list
+- --help
+- --wikipedia
