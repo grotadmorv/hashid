@@ -25,8 +25,17 @@ def find_hash(string):
 
 
 parser = argparse.ArgumentParser(description='Find hash')
-parser.add_argument('hash', metavar='INPUT', type=str, help='The Hash to find')
+parser.add_argument('hash', metavar='hash', type=str, help='The Hash to find')
+parser.add_argument('--list', dest='hash_list', action='store_const',
+                    const=True, default=False,
+                    help='List of hashes know')
 
 args = parser.parse_args()
+
+if args.hash_list:
+        print("List of hash : ")
+        for hash_name, regex in list_hash.items():
+                print(hash_name)
+
 print(find_hash(args.hash))
 

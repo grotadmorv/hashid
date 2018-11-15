@@ -3,6 +3,9 @@
 run : 
 - py hashid.py 'your_hash'
 
+exemple cmd : 
+- py hashid.py `'68b329da9893e34099c7d8ad5cb9c940'`
+
 list of hash and a example : 
 - md5 : `68b329da9893e34099c7d8ad5cb9c940`
 - sha1 : `adc83b19e793491b1c6ea0fd8b46cd9f32e592fc`
